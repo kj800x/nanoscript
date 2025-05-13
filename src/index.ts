@@ -8,7 +8,7 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function main() {
   console.log("hello world");
-  sleep(5000);
+  await sleep(5000);
   console.log("listing files in input directory");
   const files = readdirSync(inputDir);
   console.log(files);
@@ -17,7 +17,7 @@ async function main() {
   writeFileSync(join(outputDir, "file2.txt"), "hello world 2");
   for (var i = 0; i < 60; i++) {
     console.log(i);
-    sleep(1000);
+    await sleep(1000);
   }
   console.log("all done");
 }
