@@ -15,7 +15,10 @@ async function main() {
   console.log("writing files to output directory");
   writeFileSync(join(outputDir, "file1.txt"), "hello world 1");
   writeFileSync(join(outputDir, "file2.txt"), "hello world 2");
-  sleep(1000);
+  for (var i = 0; i < 60; i++) {
+    console.log(i);
+    sleep(1000);
+  }
   console.log("all done");
 }
 
