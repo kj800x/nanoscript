@@ -1,8 +1,8 @@
 import { readdirSync, writeFileSync } from "fs";
 import { join } from "path";
 
-const inputDir = process.env["INPUT_DIR"];
-const outputDir = process.env["OUTPUT_DIR"];
+const inputDir = process.env["INPUT_DIR"] as string;
+const outputDir = process.env["OUTPUT_DIR"] as string;
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
