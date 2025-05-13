@@ -19,7 +19,7 @@ async function main() {
     console.log(i);
     await sleep(1000);
   }
-  console.log("all done");
+  throw new Error("Oops!");
 }
 
 main().catch((e) => {
